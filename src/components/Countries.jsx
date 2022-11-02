@@ -10,6 +10,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
+ const INTERGER_FORMATER = new Intl.NumberFormat("en-us", {
+  maximumFractionDigits: 0,
+});
 const Countries = ({ clearSelectedRegion, selectedRgion }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -54,7 +57,7 @@ const Countries = ({ clearSelectedRegion, selectedRgion }) => {
                     {country.name.common}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                   {`Population:${country.population}`}
+                   {`Population:${INTERGER_FORMATER.format(country.population)}`}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                    {`Region:${country.region}`}
