@@ -16,10 +16,10 @@ function RegionPicker({onRegionPickHandler}) {
       sx={{
         width: "100%",
         minHeight: '90vh',display:"flex",alignItems:"center",justifyContent:"center",margin:"10px 0",
-        backgroundColor: '#fFF',
+                    backgroundColor: '#fFF',
       }}
             >
-                <Grid container spacing={1} columns={12}>
+                <Grid container spacing={1} columns={12} sx={{overflow:"hidden"}}>
                     <Grid item xs={12} sm={12} md={6} lg={6}>
                         <div  className="region_container" onClick={() => {
                             onRegionPickHandler("africa")
@@ -28,7 +28,7 @@ function RegionPicker({onRegionPickHandler}) {
                             <Typography variant="h4">Africa</Typography>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <Grid item xs={12} sm={12} md={6} lg={6} sx={{overflow:"hidden"}}>
                         <div className="region_container" onClick={() => {
                             onRegionPickHandler("europe")
                         }}>
@@ -36,7 +36,7 @@ function RegionPicker({onRegionPickHandler}) {
                             <Typography variant="h4">Europe</Typography>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <Grid item xs={12} sm={12} md={6} lg={6} sx={{overflow:"hidden"}}>
                         <div className="region_container" onClick={() => {
                             onRegionPickHandler("americas")
                         }}>
@@ -44,7 +44,7 @@ function RegionPicker({onRegionPickHandler}) {
                             <Typography variant="h4">Americas</Typography>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <Grid item xs={12} sm={12} md={6} lg={6} sx={{overflow:"hidden"}}>
                         <div className="region_container" onClick={() => {
                             onRegionPickHandler("asia")
                         }}>
