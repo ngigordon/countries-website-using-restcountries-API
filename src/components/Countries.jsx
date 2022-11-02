@@ -24,7 +24,6 @@ const Countries = ({ clearSelectedRegion, selectedRgion }) => {
       url: `https://restcountries.com/v3.1/region/${selectedRgion}`,
     })
       .then((response) => {
-        console.log(response.data);
         setData(response.data);
       })
       .catch((e) => console.log(e))
